@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS posts_tags CASCADE;
+DROP TABLE IF EXISTS posts CASCADE;
+DROP TABLE IF EXISTS tags CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(999),
+	name VARCHAR(255),
+	city_borough VARCHAR(999),
+	img_url VARCHAR(999)
+);
+
+CREATE TABLE posts (
+	id SERIAL PRIMARY KEY,
+	-- traintitle CHAR,	
+	comment VARCHAR(999),
+	created_at TIMESTAMP,
+	user_id INTEGER REFERENCES users
+);
+
+CREATE TABLE tags (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(255)
+);
+
+CREATE TABLE posts_tags (
+	post_id INTEGER REFERENCES posts,
+	tag_id INTEGER REFERENCES tags
+);
