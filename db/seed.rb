@@ -10,8 +10,9 @@ require_relative '../models/post.rb'
 require_relative '../models/user.rb'
 require_relative '../models/tag.rb'
 
-Post.destroy_all
+
 User.destroy_all
+Post.destroy_all
 Tag.destroy_all
 
 #================#
@@ -61,7 +62,8 @@ post_comments = ['Smooth Ride Today', 'Electrical Problem', 'This train smells a
 
 5.times do
 post = Post.new({
-		comment: post_comments.sample
+		comment: post_comments.sample,
+		user: User.all.sample
 		# traintitle: post_traintitles.sample
 		})
 	post.save
