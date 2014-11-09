@@ -16,10 +16,10 @@ require_relative 'models/user.rb'
  #CONTROLLERS#
 #=============#
 
-require_relative 'controllers/home_controller.rb'
 require_relative 'controllers/posts_controller.rb'
 require_relative 'controllers/tags_controller.rb'
 require_relative 'controllers/users_controller.rb'
+require_relative 'controllers/home_controller.rb'
 
 configure :development do
   use BetterErrors::Middleware
@@ -28,7 +28,7 @@ end
 
 ActiveRecord::Base.establish_connection({
 	adapter: 'postgresql',
-	database: 'tunr_db',
+	database: 'mtastinks_db',
 	host: 'localhost'
 })
 

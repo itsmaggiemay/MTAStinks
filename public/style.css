@@ -1,0 +1,19 @@
+h1 {
+	font-family: 'Pacifico', cursive;
+	font-size: 30px;
+}
+
+h3 {
+	font-family: 'Raleway', sans-serif;
+}
+#nav {
+	font-family: 'Raleway', sans-serif;
+}
+
+#main_image {
+	text-align: center;
+}
+
+body {
+	background: #858585;
+}

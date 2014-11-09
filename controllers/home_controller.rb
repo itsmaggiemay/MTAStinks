@@ -3,5 +3,5 @@
 #================#
 
 get '/' do
-	erb :'home/home'
+	erb :'/home/home'
 end
