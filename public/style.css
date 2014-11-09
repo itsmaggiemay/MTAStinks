@@ -1,3 +1,7 @@
+body {
+	background: #858585;
+}
+
 h1 {
 	font-family: 'Pacifico', cursive;
 	font-size: 30px;
@@ -14,6 +18,19 @@ h3 {
 	text-align: center;
 }
 
-body {
-	background: #858585;
+/*.posts {
+	color: #ffffff;
+	font-weight: none;
+	font-family: 'Lucida Sans Unicode', sans-serif;
+	background: #000000;
+	margin-bottom: 30px;
+	width: 500px;
+	height: 100px;
+	border: 1px solid #ffffff;
+	text-align: justify;
+	padding-bottom: 50px;
+}*/
+
+h4 {
+		font-family: 'Arial', sans-serif;
 }

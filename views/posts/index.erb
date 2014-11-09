@@ -1,0 +1,21 @@
+
+
+	<% @posts.each do |post| %>
+	<div style="text-align: center; 
+							border: 1px solid black; border-radius: 15px; margin-left: 550px; margin-bottom: 20px; width: 600px; background-color: rgba(0,0,0,0.25)">
+	<div class ="posts">
+<h2>
+		<%= post.id%> :: <%= post.comment %> 
+	</h2>
+
+	<h4>
+		<%= post.created_at %><%= post.user_id %>
+	</h4>
+	<a href ="/posts/<%= post.id%>">View The Post</a>
+	</div> 
+</div>
+<% end %>
+<br><br>
+
+
+
