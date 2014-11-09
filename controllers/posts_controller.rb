@@ -16,7 +16,6 @@ get '/posts/:id' do
 	erb :'/posts/show'
 end
 
-
 #CREATE
 post '/posts' do
 	post = Post.new(params[:post])
@@ -27,7 +26,9 @@ post '/posts' do
 	end
 end
 
-# #EDIT
-# get '/posts/:id/edit' do
-# 	@post = Post.find(params[:id])
-# 	@users = 
+#EDIT
+get '/posts/:id/edit' do
+	@post = Post.find(params[:id])
+	@users = User.all
+	erb :'/posts/edit'
+end
