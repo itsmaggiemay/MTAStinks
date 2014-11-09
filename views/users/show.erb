@@ -1,0 +1,10 @@
+<div class="user" style="text-align: center">
+<h2><img src="<%=@user.img_url%>" style="height: 80px; width: 80px;"/><br>
+	<%=@user.name%><br>  
+	@<%=@user.username%><br>
+<%=@user.city_borough%></h2>
+	<div>
+		<a href="/users/<%=@user.id%>/edit">EDIT</a> or
+		<a href="/users/<%=@user.id%>/edit">DELETE</a>
+	</div>
+</div>
