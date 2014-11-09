@@ -32,3 +32,24 @@ get '/posts/:id/edit' do
 	@users = User.all
 	erb :'/posts/edit'
 end
+
+
+# UPDATE
+put '/posts/:id' do
+	post = Post.find(params[:id])
+	if post.update(params[:post])
+		redirect('/posts/#{post.id}')
+	else
+		redirect('/posts/#{post.id}/edit')
+	end
+end
+
+#DESTROY
+delete '/posts/:id' do
+	post = Post.find(params[:id])
+	if post.destroy 
+		redirect ('/posts')
+	else
+		redirect ("/posts/#{post.id}")
+	end
+end
