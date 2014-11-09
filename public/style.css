@@ -1,17 +1,42 @@
+
+#container {
+    width: 950px;
+    margin :0 auto;
+
+}
+
+#userphoto {
+    float: left;
+}
+#userinfo {
+    float: right;
+    display: inline-block;
+    
+}
+
+header {
+	background: url("http://i.imgur.com/QS0eYpq.png");
+	background-repeat: repeat-x;
+	text-align: center;
+	padding-top: 10px;
+}
+
 body {
-	background: #858585;
+	background: #838383;
 }
 
 h1 {
 	font-family: 'Pacifico', cursive;
-	font-size: 30px;
+	font-size: 50px;
 }
 
-h3 {
-	font-family: 'Raleway', sans-serif;
+p {
+	font-family: 'Lato', sans-serif;
 }
+
 #nav {
 	font-family: 'Raleway', sans-serif;
+    float: clear;
 }
 
 #main_image {

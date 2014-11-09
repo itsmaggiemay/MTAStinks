@@ -2,6 +2,7 @@
 get '/posts' do 
 	@posts = Post.order(created_at: :desc)
 	@users = User.all
+	
 	erb :'/posts/index' 
 end
 
@@ -24,6 +25,7 @@ end
 #SHOW (finding each post and showing by itself)
 get '/posts/:id' do
 	@post = Post.find(params[:id])
+	@tags = Tag.all
 	erb :'/posts/show'
 end
 
