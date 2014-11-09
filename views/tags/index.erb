@@ -1,1 +1,9 @@
 <div style="text-align: center;">
+	<% @tags.each do |tag|%>
+	<h2>
+		<%=tag.name%>
+	<a href="/tags/<%=tag.id%>">View</a>
+</h2>
+
+<%end%>
+</div> 
