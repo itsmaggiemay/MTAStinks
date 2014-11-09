@@ -1,7 +1,7 @@
 #INDEX (main page & lists of posts)
 get '/posts' do 
 	@posts = Post.order(created_at: :desc)
-	@user = User.all
+	@users = User.all
 	erb :'/posts/index' 
 end
 
@@ -37,7 +37,7 @@ end
 
 
 # UPDATE
-put '/posts/:id' do
+post '/posts/:id' do
 	post = Post.find(params[:id])
 	if post.update(params[:post])
 		redirect("/posts/#{post.id}")
@@ -45,7 +45,6 @@ put '/posts/:id' do
 		redirect("/posts/#{post.id}/edit")
 	end
 end
-
 
 
 #DESTROY

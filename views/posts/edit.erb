@@ -1,5 +1,5 @@
 <form action= "/posts/<%= @post.id%>" method="POST">
-	<input type="hidden" name="_method" method="PUT">
+	<input type="hidden" name="_method" method="PUT"/>
 
 <!-- comment fix -->
 <label for="comment">Comment<br>
@@ -15,11 +15,11 @@
 	</select>
 </label><br>
 
-	<input type="submit" name="submit">
+	<input type="submit">
 </form>
 
 <!-- delete works -->
 <form action="/posts/<%= @post.id%>" method="POST">
-	<input type="hidden" name="_method" value="DELETE">
+	<input type="hidden" name="_method" value="DELETE"/>
 <button>DELETE</button>
 </form> 

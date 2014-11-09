@@ -1,0 +1,11 @@
+<div id="userslist">
+<div style="text-align:center">
+	<a href="/users/new">Create new user</a>
+<% @users.each do |user|%>
+<h2><img src="<%=user.img_url%>" style="height: 80px; width: 80px;"/><br>
+	<%=user.name%><br>  
+	@<%=user.username%><br>
+<%=user.city_borough%></h2>
+
+<%end%>
+</div>
