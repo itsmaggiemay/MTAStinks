@@ -1,0 +1,21 @@
+<div class="user">
+  <h4>Edit Tag</h4>
+  <form action="/tags/<%= @tag.id %>" method="post">
+    <input name="_method" type="hidden" value="put"/>
+    <div>
+      <label>Name:
+        <input type="text" name="tag[name]" value="<%= @tag.name %>">
+      </label>
+    </div>
+    <input type="submit">
+  </form>
+</div>
+
+<div>
+  <form action="/tags/<%= @tag.id %>" method="post">
+    <input name="_method" type="hidden" value="delete"/>
+    <button>Delete tag</button>
+  </form>
+</div>
+
+<a href="/tags">Back to List of Tags</a>

@@ -1,0 +1,45 @@
+<!-- edit the tag -->
+
+<div class="tag">
+  <h2><%= @tag.name %></h2>
+  <div>
+    <a href="/tags/<%= @tag.id %>/edit">Edit this tag</a>
+</div>
+
+<!-- view post under the tag by itself -->
+
+ <% @tag.posts.each do |post| %>
+    <div class="post">
+      <p><%= post.user.name %></p>
+   
+      <div>
+        <h6><%= post.created_at %> | <span><%= post.comment %></span></h6>
+        <a href="/posts/<%= post.id %>">View this post by itself</a>
+      </div>
+      <form action="/tags/<%= @tag.id %>/remove_post" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="post_id" value="<%= post.id %>">
+        <button>Remove from tag</button>
+      </form>
+    </div>
+  <% end %>
+
+
+
+
+   <div>
+    <h3>Add new post to this tag</h3>
+    <form action="/tags/<%=@tag.id%>/add_post" method="post">
+      <input type="hidden" name="_method" value="put">
+      <select name="post_id">
+        <% @posts.each do |post| %>
+          <option value="<%= post.id %>"><%= post.user.name + " -- " + post.comment %></option>
+        <% end %>
+      </select>
+      <button>Add to tag</button>
+    </form>
+  </div>
+
+</div>
+
+  <a href="/tags">Back to List of Tags</a>
