@@ -1,0 +1,17 @@
+<form action="/posts" method="POST">
+
+<label for="comment">Comment<br>
+	<input type="text" name="post[comment]">
+</label><br>
+
+<label for="user">User<br>
+	<select name="post[user_id]">
+		<% @users.each do |user| %>
+		<option value="<%= user.id %>"><%= user.name %></option>
+		<% end %>
+	</select>
+</label><br>
+
+<input type="submit" name="submit">	
+
+</form>
