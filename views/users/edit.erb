@@ -1,13 +1,36 @@
-<div class="user">
+<div class="user" style="text-align: center">
 	<h2>EDIT USER</h2>
 
 <form action="/users/<%=@user.id%>" method="post">
 	<input type="hidden" name="_method" value="put"/>
 	<div>
-		<label for="name">Name
+		
+		<label for="name">Name:
 			<input type="text" name="user[name]" value="<%=@user.name%>">
-		</label>
-	</div>
+		</label><br>
+
+		<label for="username">Username:
+			<input type="text" name="user[username]" value="<%=@user.username%>">
+		</label><br>
+
+		<label for="city_borough">City, Borough:
+			<input type="text" name="user[city_borough]" value="<%=@user.city_borough%>">
+		</label><Br>
+
+		<label for="url">Image URL:
+			<input type="text" name="user[img_url]" value="<%=@user.img_url%>">
+		</label><br>
+
+				</div>
 	<input type="submit">
 </form>
+<div>
+
+<div>
+<form action="/users/<%=@user.id%>" method="post">
+	<input type="hidden" name="_method" value="delete"/>
+	<button>DELETE USER</button>
+</form>
+
 </div>
+

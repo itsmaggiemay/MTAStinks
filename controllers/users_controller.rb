@@ -37,7 +37,7 @@ put ('/users/:id') do
 	if user.update(params[:user])
 		redirect("/users/#{user.id}")
 	else
-		redirect("/users/#{user.id}/edit")
+		redirect("/users/#{user.id}")
 	end
 end
 
