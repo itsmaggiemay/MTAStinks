@@ -21,7 +21,7 @@ put 'tags/:id/add_tag' do
 	redirect "/tags/#{tag.id}"
 end
 
-put '/tags/:id/remove_tag'
+put '/tags/:id/remove_tag' do
 	tag = Tag.find(params[:id])
 	tag.posts.destroy(params[:post_id])
 	redirect "tags/#{tag.id}"
