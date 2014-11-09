@@ -12,10 +12,11 @@
 	</h2>
 
 	<h4>
-		<%= post.created_at %><%= post.user_id %>
+		<%= post.created_at %> || <%=post.user_id%>
 	</h4>
 	<a href ="/posts/<%= post.id%>">View The Post</a><br>
-	<a href ="/posts/<%= post.id%>/edit">Edit The Post</a>
+	<a href ="/posts/<%= post.id%>/edit">Edit The Post</a><br>
+	<a href ="/posts/<%= post.id%>/edit">Delete The Post</a><br>
 	</div> 
 </div>
 <% end %>

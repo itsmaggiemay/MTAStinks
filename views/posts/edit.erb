@@ -1,17 +1,24 @@
-<form action= "/posts/<%= @post.id %>" method="POST">
+<form action= "/posts/<%= @post.id%>" method="POST">
 	<input type="hidden" name="_method" method="PUT">
 
+<!-- comment fix -->
 <label for="comment">Comment<br>
-	<input type="text" name="post[name]" value="<%=@post.comment%>">
+	<input type="text" name="post[comment]" value="<%=@post.comment%>">
 </label><br>
 
-<label for="time">
-	<input type="time" name="timestamp" value="<%=@post.created_at%>">
-</label>
+<!-- user drop down -->
+<label for="user">User<br>
+	<select name="post[user_id]">
+		<% @users.each do |user| %>
+		<option <%="selected" if user == @post.user %> value="<%= user.id %>"><%= user.name %></option>
+		<% end %>
+	</select>
+</label><br>
 
 	<input type="submit" name="submit">
 </form>
 
+<!-- delete works -->
 <form action="/posts/<%= @post.id%>" method="POST">
 	<input type="hidden" name="_method" value="DELETE">
 <button>DELETE</button>

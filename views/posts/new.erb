@@ -1,8 +1,11 @@
 <form action="/posts" method="POST">
 
+<!-- Comment Box -->
 <label for="comment">Comment<br>
 	<input type="text" name="post[comment]">
 </label><br>
+
+<!-- user drop down -->
 
 <label for="user">User<br>
 	<select name="post[user_id]">
@@ -11,6 +14,8 @@
 		<% end %>
 	</select>
 </label><br>
+
+<!-- submit button -->
 
 <input type="submit" name="submit">	
 
