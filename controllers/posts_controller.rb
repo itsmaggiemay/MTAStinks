@@ -11,7 +11,7 @@ get '/posts/:id' do
 end
 
 #NEW
- get '/posts/new' do
+get '/posts/new' do
  	@user = User.all
  	erb :'/posts/new'
- end
+end
