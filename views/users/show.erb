@@ -1,20 +1,27 @@
 <div class="user">
+
+<div style="text-align:center">
+<h1> <a href="/"><img src="http://i.imgur.com/E4cqzO9.png"></a>|| <a href="/posts"><img src="http://i.imgur.com/QDfVXp1.png"></a> ||
+    <a href="/users"><img src="http://i.imgur.com/LlDmtZR.png"></a> ||
+    <a href="/tags"><img src="http://i.imgur.com/ZaQnZFN.png"></a></h2>
+	
 <div id="container">	
 
 <div id="userphoto">
-	<img src="<%=@user.img_url%>"><br>
+	<img src="<%=@user.img_url%>" style="width:300px; height:300px;"><br>
 </div>
 
 <div id="userinfo">
-	<h2>
-	Name: <%=@user.name%><br>  
-	Username: @<%=@user.username%><br>
-	City, Borough: <%=@user.city_borough%>
-</h2>
-</div>
-<!-- <div>
-		<a href="/users/<%=@user.id%>/edit">EDIT</a> or
-		<a href="/users/<%=@user.id%>/edit">DELETE</a>
-</div> -->
+	<p>
+	<strong>Name:</strong> <%=@user.name%><br>  
+	<strong>Username:</strong> @<%=@user.username%><br>
+	<strong>City, Borough:</strong> <%=@user.city_borough%><br>
+	<a href="/users/<%=@user.id%>/edit">EDIT USER INFORMATION</a><br>
+		<a href="/users/<%=@user.id%>/edit">DELETE THE USER</a>
+	<a href="/users">|| RETURN TO THE USERS</a>
+</p>
 </div>
 </div>
+
+
+	

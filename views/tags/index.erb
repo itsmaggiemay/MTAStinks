@@ -1,11 +1,18 @@
-<a href="/tags/new">Add A New Tag</a>
-
+<div class="tags">
 <div style="text-align: center;">
-	<% @tags.each do |tag|%>
-	<h2>
-		<%=tag.name%>
-	<a href="/tags/<%=tag.id%>">View</a>
-</h2>
+	<h2> <a href="/"><img src="http://i.imgur.com/E4cqzO9.png"></a> || <a href="/posts"><img src="http://i.imgur.com/QDfVXp1.png"></a> ||
+    <a href="/users"><img src="http://i.imgur.com/LlDmtZR.png"></a> ||
+    <a href="/tags"><img src="http://i.imgur.com/ZaQnZFN.png"></a></h2>
+
+
+<h1>Click one of the tags below to view</h1>
+	<h3><% @tags.each do |tag|%>
+
+		
+	<a href="/tags/<%=tag.id%>"><%=tag.name%></a><br>
 
 <%end%>
-</div> 
+ 
+
+or<br> <a href="/tags/new">Add A New Tag</a></h3>
+</div>

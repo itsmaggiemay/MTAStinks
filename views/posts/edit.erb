@@ -1,9 +1,10 @@
+<div style="text-align: center">
 <form action= "/posts/<%= @post.id%>" method="POST">
 	<input type="hidden" name="_method" method="PUT"/>
 
 <!-- comment fix -->
 <label for="comment">Comment<br>
-	<input type="text" name="post[comment]" value="<%=@post.comment%>">
+	<textarea type="text" name="post[comment]" value="<%=@post.comment%>" ></textarea>
 </label><br>
 
 <!-- user drop down -->
@@ -14,8 +15,9 @@
 		<% end %>
 	</select>
 </label><br>
+<button>SUBMIT</BUTTON>
 
-	<input type="submit">
+	<!-- <input type="submit"> -->
 </form>
 
 <!-- delete works -->

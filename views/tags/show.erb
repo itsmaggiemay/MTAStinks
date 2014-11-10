@@ -1,34 +1,42 @@
+<div style="text-align:center">
+<h1> <a href="/"><img src="http://i.imgur.com/E4cqzO9.png"></a>|| <a href="/posts"><img src="http://i.imgur.com/QDfVXp1.png"></a> ||
+    <a href="/users"><img src="http://i.imgur.com/LlDmtZR.png"></a> ||
+    <a href="/tags"><img src="http://i.imgur.com/ZaQnZFN.png"></a></h2>
+
 <!-- edit the tag -->
 
-<div class="tag">
-  <h2><%= @tag.name %></h2>
-  <div>
-    <a href="/tags/<%= @tag.id %>/edit">Edit this tag</a>
+<div class="tagself">
+  <h2>Posts with "<%= @tag.name %> " Tag</h2>
+  
+    <a href="/tags/<%= @tag.id %>/edit">››Edit this tag‹‹</a>
 </div>
 
 <!-- view post under the tag by itself -->
 
  <% @tag.posts.each do |post| %>
-    <div class="post">
-      <p><%= post.user.name %></p>
-   
-      <div>
-        <h6><%= post.created_at %> | <span><%= post.comment %></span></h6>
-        <a href="/posts/<%= post.id %>">View this post by itself</a>
-      </div>
-      <form action="/tags/<%= @tag.id %>/remove_post" method="post">
+   <div class="tagpost"><br>
+     <img src="<%= post.user.img_url%>" style=" padding-left: px; padding-top: px; border-radius: 10px; border: 3px solid #fffff;">
+     @<%=post.user.username%><br><%= post.user.name %>
+  <br><br> || POSTED ON:   <%= post.created_at %> ||
+  
+      
+       <br><p><%= post.comment %></p><br><br>
+  
+  <a href="/posts/<%= post.id %>">View this post by itself</a>
+     
+    <form action="/tags/<%= @tag.id %>/remove_post" method="post">
         <input type="hidden" name="_method" value="put">
         <input type="hidden" name="post_id" value="<%= post.id %>">
         <button>Remove from tag</button>
-      </form>
-    </div>
+    </form>
+  </div>
+
   <% end %>
 
 
 
 
-   <div>
-    <h3>Add new post to this tag</h3>
+   <div style="text-align:center">
     <form action="/tags/<%=@tag.id%>/add_post" method="post">
       <input type="hidden" name="_method" value="put">
       <select name="post_id">
@@ -38,8 +46,8 @@
       </select>
       <button>Add to tag</button>
     </form>
-  </div>
 
-</div>
 
-  <a href="/tags">Back to List of Tags</a>
+
+<br>
+  <a href="/tags"><div style="padding-bottom: 200px;">Back to List of Tags</a></div>

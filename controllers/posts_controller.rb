@@ -2,13 +2,14 @@
 get '/posts' do 
 	@posts = Post.order(created_at: :desc)
 	@users = User.all
-	
+	@tags = Tag.all
 	erb :'/posts/index' 
 end
 
 #NEW
 get '/posts/new' do
  	@users = User.all
+ 	@tags = Tag.all
  	erb :'/posts/new'
 end
 
@@ -26,6 +27,7 @@ end
 get '/posts/:id' do
 	@post = Post.find(params[:id])
 	@tags = Tag.all
+	@users = User.all
 	erb :'/posts/show'
 end
 

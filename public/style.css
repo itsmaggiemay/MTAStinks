@@ -1,61 +1,292 @@
-
+/*post */
 #container {
-    width: 950px;
-    margin :0 auto;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
 
 }
 
 #userphoto {
     float: left;
-}
-#userinfo {
-    float: right;
-    display: inline-block;
-    
+    width: 300px;
+    height: 300px;
+    background-color: black;
 }
 
+#userinfo {
+    background-color: ;
+    width: 450px;
+   /* height: 300px;*/
+    float: right;
+    line-height: 50px;
+    padding-top: 30px;
+
+}
+
+#navigation {
+    float: bottom;
+}
 header {
-	background: url("http://i.imgur.com/QS0eYpq.png");
-	background-repeat: repeat-x;
-	text-align: center;
-	padding-top: 10px;
+    background: url("http://i.imgur.com/QS0eYpq.png");
+    background-repeat: repeat-x;
+    text-align: center;
+    padding-top: 10px;
+}
+
+header img { 
+    margin-left: 120px;
 }
 
 body {
-	background: #838383;
+    background: #838383;
+}
+
+.usersnew h2 {
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+}
+
+.formforusers h2
+{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+
+.formforusers form{
+    color: #00f38a;
+    font-size: 28px;
+    text-align: left;
+    padding-left: 750px;
+    padding-bottom: 400px;
+    width: 400px;
+    font-family: 'Pacifico', cursive;
+}
+
+.formforusers input{
+    color: #fffff;
+}
+
+.listusers
+{
+    padding-left: 300px;
+
+}
+.listusers h2{
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    padding-right: 300px;
+}
+
+.listusers h3
+{
+    border: 1px solid white;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+.tags h3
+{
+/*    padding-left: 700px;*/
+    
+    margin-left: 850px;
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+.tagself
+{
+
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    color: azure;
+    line-height: 20px;
+    padding-bottom: 30px;
+}
+
+.tagpost {
+    padding: 20px;
+    text-align: justify;
+    color: mistyrose;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    background: black;
+    text-align: left;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border: 2px solid white; 
+    border-radius: 15px;  
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.tagpost p{
+    color: powderblue;
+
+}
+.tagpost img {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-left: 10px;
+}
+
+.tagpost a {
+    border: 1px solid #000;
+
+
+}
+.tagpost p {
+    color: #fff;
+    padding-top: 10px;
+    float: left;
+    border: 1px solid black;
+}
+
+.tagpost form {
+    border: 1px solid black;
+}
+/*HOMEEEE*/
+
+.home h1{ 
+    text-align: center;
+    color: #000;
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
+}
+
+.home h2 {
+    font-size: 50px;
+    color: #ffffff;
+    padding-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+.home {
+    line-height: 30px;
+}
+
+
+/*User Show page individually*/
+
+#userinfo p {
+    text-align: left;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
 }
 
 h1 {
-	font-family: 'Pacifico', cursive;
-	font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
 }
 
-p {
-	font-family: 'Lato', sans-serif;
-}
 
 #nav {
-	font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
     float: clear;
 }
 
 #main_image {
-	text-align: center;
+    text-align: center;
 }
 
-/*.posts {
-	color: #ffffff;
-	font-weight: none;
-	font-family: 'Lucida Sans Unicode', sans-serif;
-	background: #000000;
-	margin-bottom: 30px;
-	width: 500px;
-	height: 100px;
-	border: 1px solid #ffffff;
-	text-align: justify;
-	padding-bottom: 50px;
-}*/
-
-h4 {
-		font-family: 'Arial', sans-serif;
+.viewimage {
+    background: black;
 }
+
+
+
+
+/* POSTS */
+
+
+.posts {
+    border: 2px solid white; 
+    border-radius: 15px; 
+    margin: 0 auto;
+    width: 600px; 
+    background-color: rgba(0,0,0,1);
+   /* background: url("http://i.imgur.com/to4rjus.jpg");*/
+}
+
+.posts img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 30px 0px 30px 40px;
+}
+
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    color: rgba(255,255,255,1);
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.new {
+    padding-top: 120px;
+    padding-left: 50px;
+    text-align: justify;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    
+}
+
+
+/*SHOWSS*/
+
+.post {
+    padding: 40px;
+    text-align: justify;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    background: black;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid white; 
+    border-radius: 15px;  
+    background-color: rgba(0,0,0,0.5);
+    }
+
+span {
+    color: #cccccc;
+    font-size: 30px;
+}
+
+/*TAGGSSS*/
+
+.tags h2 {
+    font-size: 50px;
+    color: #ffffff;
+    padding-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+/*generic*/
+ul {
+  list-style-type: none;
+  text-align: left;
+  line-height: 1.35em;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: papayawhip;
+}
+
+a:visited {
+    color: white;
+}
+

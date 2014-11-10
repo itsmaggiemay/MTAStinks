@@ -1,12 +1,26 @@
-<div id="userslist">
+
 <div style="text-align:center">
-	<a href="/users/new">Create new user</a>
-	
+
+		<h2> <a href="/"><img src="http://i.imgur.com/E4cqzO9.png"></a> || <a href="/posts"><img src="http://i.imgur.com/QDfVXp1.png"></a> ||
+    <a href="/users"><img src="http://i.imgur.com/LlDmtZR.png"></a> ||
+    <a href="/tags"><img src="http://i.imgur.com/ZaQnZFN.png"></a></h2>
+<div class="listusers">
+<h2>List of Users
+<a href="/users/new"><br>CREATE A NEW USER</a></h2>
+
+<div style="text-align:center">
 <% @users.each do |user|%>
-<h2><img src="<%=user.img_url%>" style="height: 80px; width: 80px;"/><br>
-	<%=user.name%><br>  
-	@<%=user.username%><br>
-<%=user.city_borough%></h2>
-<a href="/users/<%=user.id%>">View</a>
-<%end%>
+<h3><img src="<%=user.img_url%>" style="height: 300px; width: 300px;"/><br>
+
+
+
+	<p>
+	<span>Name:</span> <%=user.name%><br>  
+	<span>UserName:</span> @<%=user.username%><br>
+<span>City, Bourough:</span> <%=user.city_borough%><br>
+<a href="/users/<%=user.id%>">View</a><br><br></h3>
+
+	<%end%>
 </div>
+</div>
+

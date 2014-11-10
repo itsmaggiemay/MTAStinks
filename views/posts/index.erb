@@ -1,31 +1,47 @@
 <div style="text-align:center">
+<h1> <a href="/"><img src="http://i.imgur.com/E4cqzO9.png"></a>|| <a href="/posts"><img src="http://i.imgur.com/QDfVXp1.png"></a> ||
+    <a href="/users"><img src="http://i.imgur.com/LlDmtZR.png"></a> ||
+    <a href="/tags"><img src="http://i.imgur.com/ZaQnZFN.png"></a></h2>
+
+
+    
 	<a href="/posts/new">GOT A NEW UPDATE?</a>
 </div>
+
 <br><br>
 
 	<% @posts.each do |post| %>
-	<div class="container">
-	<div style="text-align: center; 
-							border: 1px solid black; border-radius: 15px; margin-left: 550px; margin-bottom: 20px; width: 600px; background-color: rgba(0,0,0,0.25)">
+	<div class="postcontainer">
 	<div class ="posts">
-<h2>
-	<img src="<%= post.user.img_url%>" style="height: 100px; width: 100px;"/>
-		@<%=post.user.username%> || <%= post.id%> :: <%= post.comment %> ||
-	</h2>
 
-	<h4>
-		<%= post.created_at %> || <%= post.user.name%>
-	</h4>
+<!-- userimage -->
+	<img src="<%= post.user.img_url%>" style=" padding-left: px; padding-top: px; border-radius: 10px; border: 3px solid #fffff;">
+	<h3>
+		<b>@<%=post.user.username%></b>
+		<br><%= post.user.name%></h3>
 
-
+	<div class="new">
+		<h4>
+		<br> <%= post.comment %><br>
+		<hr>
+			<%= post.created_at %> 
+		</h4>
+	</div>
 	
+	<div style="text-align:center; margin-left: 0 auto; padding-bottom: 20px">
+		<a href ="/posts/<%= post.id%>">View The Post</a> || 
+		<a href ="/posts/<%= post.id%>/edit">Edit The Post</a> || 
+		<a href ="/posts/<%= post.id%>/edit">Delete The Post</a>
+	</div>
 
-	</div> 
 </div>
-<div style="text-align:center; margin-left: 100px;">
-	<a href ="/posts/<%= post.id%>">View The Post</a> || <a href ="/posts/<%= post.id%>/edit">Edit The Post</a> || <a href ="/posts/<%= post.id%>/edit">Delete The Post</a></div><br>
+<br>
+</div>
 <% end %>
-<br><br>
+
+
+
+
 
 
 
