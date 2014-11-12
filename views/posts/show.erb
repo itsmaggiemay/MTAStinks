@@ -6,25 +6,35 @@
 
 
 <!-- WHAT IS PRINTED -->
-<br><br><div class="post">
+<br><br><div class="post" style="text-align: left;">
 	<section>
+	
 	<h2>
-		<span>Post: <%=@post.comment%></span> 
-		<br>Created on: <%=@post.created_at%><br><br>
-
+		
+		<span><strong>Post:</span></strong> <%=@post.comment%><br>
+		
 		<span>Tags: <%@post.tags.each do |tag| %>
 			<a href ="/tags/<%=tag.id%>">#<%=tag.name%></a>
-			<%end%></span><br><br>
-<a href="/posts/<%=@post.id %>/edit">EDIT THE POST</a><Br>
+			</span>
+
+		<br><span><strong>Created on:</span></strong> <%=@post.created_at%><br>
+		<br><br><%end%>
+
+		<div style="text-align: center">
+
+
+			<a href="/posts/<%=@post.id %>/edit">EDIT THE POST</a><Br>
+	
 	</h2>
 </div>
-<div style="text-align: center"><br><br>
+
 	
 
 
 
 
 	<!-- BACK TO LINK OF POSTS -->
+	<div style="text-align: center"><br>
 	<a href="/posts">BACK TO THE LIST OF POSTS</a>
 	<br><br>
 </div>

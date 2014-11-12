@@ -1,3 +1,65 @@
+
+span {
+    color: rgba(199,21,133,1);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+/* POSTS */
+.post {
+    padding: 40px;
+    text-align: justify;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    background: black;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid white; 
+    border-radius: 15px;  
+    background-color: rgba(0,0,0,0.5);
+    }
+
+.posts {
+    border: 2px solid white; 
+    border-radius: 15px; 
+    margin: 0 auto;
+    width: 600px; 
+    background-color: rgba(0,0,0,1);
+   /* background: url("http://i.imgur.com/to4rjus.jpg");*/
+}
+
+.posts img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 30px 0px 30px 40px;
+}
+
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    color: rgba(255,255,255,1);
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.new {
+    padding-top: 120px;
+    padding-left: 50px;
+    text-align: justify;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    
+}
+
+
 /*post */
 #container {
     width: 800px;
@@ -214,68 +276,7 @@ h1 {
 
 
 
-/* POSTS */
 
-
-.posts {
-    border: 2px solid white; 
-    border-radius: 15px; 
-    margin: 0 auto;
-    width: 600px; 
-    background-color: rgba(0,0,0,1);
-   /* background: url("http://i.imgur.com/to4rjus.jpg");*/
-}
-
-.posts img{
-    width: 80px;
-    height: 80px;
-    float: left;
-    margin: 30px 0px 30px 40px;
-}
-
-
-h3 {
-    font-family: 'Lato', sans-serif;
-    color: rgba(255,255,255,1);
-    float: left;
-    padding-left: 20px;
-    padding-top: 20px;
-    line-height: 30px;
-    text-align: left;
-}
-
-.new {
-    padding-top: 120px;
-    padding-left: 50px;
-    text-align: justify;
-    color: #ffffff;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    
-}
-
-
-/*SHOWSS*/
-
-.post {
-    padding: 40px;
-    text-align: justify;
-    color: #ffffff;
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    background: black;
-    text-align: center;
-    width: 500px;
-    margin: 0 auto;
-    border: 2px solid white; 
-    border-radius: 15px;  
-    background-color: rgba(0,0,0,0.5);
-    }
-
-span {
-    color: #cccccc;
-    font-size: 30px;
-}
 
 /*TAGGSSS*/
 
