@@ -1,3 +1,7 @@
+# ===============
+#    Microposts
+# ===============
+
 #INDEX (main page & lists of posts)
 get '/posts' do 
 	@posts = Post.order(created_at: :desc)
@@ -16,6 +20,8 @@ end
 #CREATE
 post '/posts' do
 	post = Post.new(params[:post])
+	tag = Tag.find(params[:tags])
+	post.tags << tag
 	if post.save
 		redirect("/posts/#{post.id}")
 	else
@@ -27,7 +33,6 @@ end
 get '/posts/:id' do
 	@post = Post.find(params[:id])
 	@tags = Tag.all
-	@users = User.all
 	erb :'/posts/show'
 end
 
@@ -36,6 +41,7 @@ end
 get '/posts/:id/edit' do
 	@post = Post.find(params[:id])
 	@users = User.all
+	@tags = Tag.all
 	erb :'/posts/edit'
 end
 

@@ -1,17 +1,30 @@
+<!-- MENU BAR -->
 <div style="text-align: center;">
 	<h1 > <a href="/"><img src="http://i.imgur.com/E4cqzO9.png"></a> || <a href="/posts"><img src="http://i.imgur.com/QDfVXp1.png"></a> ||
     <a href="/users"><img src="http://i.imgur.com/LlDmtZR.png"></a> ||
     <a href="/tags"><img src="http://i.imgur.com/ZaQnZFN.png"></a></h1>
 
+
+<!-- WHAT IS PRINTED -->
 <br><br><div class="post">
 	<section>
 	<h2>
-		<span>Post: <%=@post.comment%></span> <br> <%=@post.created_at%><br><br>
-				<a href="/posts/<%=@post.id %>/edit">EDIT THE POST</a><Br>
+		<span>Post: <%=@post.comment%></span> 
+		<br>Created on: <%=@post.created_at%><br><br>
+
+		<span>Tags: <%@post.tags.each do |tag| %>
+			<a href ="/tags/<%=tag.id%>">#<%=tag.name%></a>
+			<%end%></span><br><br>
+<a href="/posts/<%=@post.id %>/edit">EDIT THE POST</a><Br>
 	</h2>
 </div>
 <div style="text-align: center"><br><br>
 	
+
+
+
+
+	<!-- BACK TO LINK OF POSTS -->
 	<a href="/posts">BACK TO THE LIST OF POSTS</a>
 	<br><br>
 </div>

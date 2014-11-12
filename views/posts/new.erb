@@ -20,7 +20,18 @@
 	</select>
 </label><br>
 
+
 <a href='/users/new'>or Create a new user</a><br>
+
+
+<!-- user drop down -->
+
+	<label for="tags">
+						<span>Tag Your Photo:</span><br>
+	    				<% @tags.each do |tag| %>
+								<input type="checkbox" name="tags[]" value="<%= tag.id %>"><%= tag.name %><br>
+					<% end %>
+		</label>
 
 <input type="submit">	
 </form>
